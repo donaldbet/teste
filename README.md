@@ -4,7 +4,7 @@
 O objetivo desta avaliação é medir o nível de conhecimento do candidato nas áreas em que a vaga será exigida.
 
 # Escopo
-Deve-se criar uma aplicação em PHP para resolver o problema descrito abaixo, utilizando framework Laravel 5. Fique a vontade para explorar todo o seu conhecimento em automação de tarefas, CSS e Javascript com JQuery, Vue.JS, e criação de APIs.
+Deve-se criar uma aplicação em PHP para resolver o problema descrito abaixo, utilizando framework Laravel 11. Fique a vontade para explorar todo o seu conhecimento em automação de tarefas, CSS e Javascript com JQuery, Vue.JS, e criação de APIs.
 
 # Cenário fictício
 Prof. Jubilut está lançando uma nova plataforma de ensino online. Nesta plataforma, desejamos realizar a matrícula de alunos em cursos através de um painel administrativo, bem como os dados cadastrais de cursos, alunos, disciplinas e professores de cada disciplina.
