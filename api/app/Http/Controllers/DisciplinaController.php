@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Curso;
 use App\Models\Disciplina;
+use App\Models\Professor;
 use Illuminate\Http\Request;
 
 class DisciplinaController extends Controller
@@ -41,7 +43,7 @@ class DisciplinaController extends Controller
             'professor.required' => 'O campo professor é obrigatório',
             'curso_id.required' => 'O campo curso é obrigatório'
         ]);
-        $disciplina = Disciplina::withTrashed()->where('nome', $request->nome)->first();
+        $disciplina = Disciplina::withTrashed()->where('titulo', $request->titulo)->first();
         if ($disciplina) {
             if ($disciplina->trashed()) {
                 $disciplina->restore();
@@ -77,7 +79,26 @@ class DisciplinaController extends Controller
      */
     public function update(Request $request, Disciplina $disciplina)
     {
-        //
+        $request->validate([
+            'titulo' => 'string',
+            'descricao' => 'string'
+        ], [
+            'titulo.string' => 'O campo título deve ser uma string',
+            'descricao.string' => 'O campo descrição deve ser uma string'
+        ]);
+        try {
+            $disciplina->update($request->all());
+            return response()->json([
+                'status' => 'success',
+                'message' => 'Disciplina atualizada com sucesso',
+                'data' => $disciplina
+            ]);
+        } catch (\Throwable $th) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Erro ao atualizar disciplina'
+            ], 400);
+        }
     }
 
     /**
@@ -85,6 +106,17 @@ class DisciplinaController extends Controller
      */
     public function destroy(Disciplina $disciplina)
     {
-        //
+        try {
+            $disciplina->delete();
+            return response()->json([
+                'status' => 'success',
+                'message' => 'Disciplina deletada com sucesso'
+            ]);
+        } catch (\Throwable $th) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Erro ao deletar disciplina'
+            ], 400);
+        } 
     }
 }

@@ -31,7 +31,14 @@ class MatriculaController extends Controller
         return response()->json([
             'status' => 'success',
             'message' => 'Matrículas encontradas',
-            'data' => $matriculas
+            'data' => $matriculas->map(function ($matricula) {
+                return [
+                    'id' => $matricula->id,
+                    'aluno' => $matricula->aluno,
+                    'curso' => $matricula->curso,
+                    'dataHora' => $matricula->created_at->format('d/m/Y H:i:s')
+                ];
+            })
         ]);
     }
 

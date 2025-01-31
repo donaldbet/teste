@@ -25,6 +25,11 @@ class InsertAdminUser extends Command
      */
     public function handle()
     {
+        $user = \App\Models\User::where('email', 'anthoniusmiguel@gmail.com')->first();
+        if ($user) {
+            echo "Usuário admin já existe\n";
+            return;
+        }
         $user = new \App\Models\User();
         $user->name = 'Admin';
         $user->email = 'anthoniusmiguel@gmail.com';

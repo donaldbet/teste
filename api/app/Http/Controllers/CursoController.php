@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Curso;
+use App\Models\Disciplina;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class CursoController extends Controller
@@ -22,7 +24,15 @@ class CursoController extends Controller
         return response()->json([
             'status' => 'success',
             'message' => 'Cursos encontrados',
-            'data' => $curso
+            'data' => $curso->map(function ($curso) {
+                return [
+                    'id' => $curso->id,
+                    'titulo' => $curso->titulo,
+                    'descricao' => $curso->descricao,
+                    'data_inicio' => Carbon::parse($curso->data_inicio)->format('d/m/Y'),
+                    'data_fim' => Carbon::parse($curso->data_fim)->format('d/m/Y'),
+                ];
+            })
         ]);
     }
 
@@ -32,17 +42,15 @@ class CursoController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'titulo' => 'required|string',
-            'descricao' => 'required|string',
-            'data_inicio' => 'required|date',
-            'data_fim' => 'required|date'
+            'titulo' => 'string',
+            'descricao' => 'string',
+            'data_inicio' => 'date',
+            'data_fim' => 'date',
         ], [
-            'titulo.required' => 'O campo título é obrigatório',
-            'descricao.required' => 'O campo descrição é obrigatório',
-            'data_inicio.required' => 'O campo data de início é obrigatório',
-            'data_fim.required' => 'O campo data de fim é obrigatório'
+            'data_inicio.date' => 'Data início deve ser uma data válida',
+            'data_fim.date' => 'Data final deve ser uma data válida'
         ]);
-        $curso = Curso::withTrashed()->where('nome', $request->nome)->first();
+        $curso = Curso::withTrashed()->where('titulo', $request->titulo)->first();
         if ($curso) {
             if ($curso->trashed()) {
                 $curso->restore();
@@ -74,7 +82,13 @@ class CursoController extends Controller
             return response()->json([
                 'status' => 'success',
                 'message' => 'Curso encontrado',
-                'data' => $curso
+                'data' => [
+                    'id' => $curso->id,
+                    'titulo' => $curso->titulo,
+                    'descricao' => $curso->descricao,
+                    'data_inicio' => Carbon::parse($curso->data_inicio)->format('d/m/Y'),
+                    'data_fim' => Carbon::parse($curso->data_fim)->format('d/m/Y'),
+                ]
             ]);
         } catch (\Exception $e) {
             return response()->json([
@@ -90,12 +104,13 @@ class CursoController extends Controller
     public function update(Request $request, Curso $curso)
     {
         $request->validate([
-            'nome' => 'string',
-            'carga_horaria' => 'integer',
-            'professor_id' => 'integer'
+            'titulo' => 'string',
+            'descricao' => 'string',
+            'data_inicio' => 'date',
+            'data_fim' => 'date',
         ], [
-            'carga_horaria.integer' => 'O campo carga horária deve ser um número inteiro',
-            'professor_id.integer' => 'O campo professor deve ser um número inteiro'
+            'data_inicio.date' => 'Data início deve ser uma data válida',
+            'data_fim.date' => 'Data final deve ser uma data válida'
         ]);
         try {
             $curso->update($request->all());
@@ -110,7 +125,6 @@ class CursoController extends Controller
                 'message' => 'Erro ao atualizar curso'
             ], 400);
         }
-
     }
 
     /**
@@ -132,23 +146,19 @@ class CursoController extends Controller
         }
     }
 
-    public function infoCard(){
-        $cursos = Curso::all();
-        $totalCursos = $cursos->count();
-        $cursoMaisAlunos = $cursos->sortByDesc('alunos_count')->first();
-        $cursoMenosAlunos = $cursos->sortBy('alunos_count')->first();
-
-        $cursoMaisAlunosNome = $cursoMaisAlunos ? $cursoMaisAlunos->nome : null;
-        $cursoMenosAlunosNome = $cursoMenosAlunos ? $cursoMenosAlunos->nome : null;
-
+    public function disciplinas(Curso $curso)
+    {
+        $disciplinas = Disciplina::where('curso_id', $curso->id)->get();
+        if ($disciplinas->isEmpty()) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Nenhuma disciplina encontrada'
+            ], 404);
+        }
         return response()->json([
             'status' => 'success',
-            'message' => 'Informações do card',
-            'data' => [
-                'total_cursos' => $totalCursos,
-                'curso_mais_alunos' => $cursoMaisAlunosNome,
-                'curso_menos_alunos' => $cursoMenosAlunosNome
-            ]
+            'message' => 'Disciplinas encontradas',
+            'data' => $disciplinas
         ]);
     }
 }

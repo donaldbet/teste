@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Aluno;
+use App\Models\Curso;
+use App\Models\Disciplina;
+use App\Models\Matricula;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class AlunoController extends Controller
@@ -22,7 +26,14 @@ class AlunoController extends Controller
         return response()->json([
             'status' => 'success',
             'message' => 'Alunos encontrados',
-            'data' => $alunos
+            'data' => $alunos->map(function ($aluno) {
+                return [
+                    'id' => $aluno->id,
+                    'nome' => $aluno->nome,
+                    'email' => $aluno->email,
+                    'data_nascimento' => Carbon::parse($aluno->data_nascimento)->format('d/m/Y')
+                ];
+            })
         ]);
     }
 
@@ -79,7 +90,12 @@ class AlunoController extends Controller
             return response()->json([
                 'status' => 'success',
                 'message' => 'Aluno encontrado',
-                'data' => $aluno
+                'data' => [
+                    'id' => $aluno->id,
+                    'nome' => $aluno->nome,
+                    'email' => $aluno->email,
+                    'data_nascimento' => Carbon::parse($aluno->data_nascimento)->format('d/m/Y')
+                ]
             ]);
         } catch (\Throwable $th) {
             return response()->json([
@@ -137,31 +153,45 @@ class AlunoController extends Controller
         }
     }
 
-    public function infoCard()
+    public function disciplinas_cursos(Aluno $aluno)
     {
         try {
-            $alunos = Aluno::all();
-            $alunosCount = $alunos->count();
-            $alunosMaiorIdade = $alunos->filter(function ($aluno) {
-                return $aluno->data_nascimento->diffInYears() >= 18;
-            })->count();
-            $alunosMenorIdade = $alunos->filter(function ($aluno) {
-                return $aluno->data_nascimento->diffInYears() < 18;
-            })->count();
+            $aluno = Aluno::findOrFail($aluno->id);
+            $matriculas = Matricula::where('aluno_id', $aluno->id)->get();
+            $disciplinas = Disciplina::whereIn('curso_id', $matriculas->pluck('curso_id'))->get();
+            $cursos = Curso::whereIn('id', $matriculas->pluck('curso_id'))->get();
+            if ($disciplinas->isEmpty()) {
+                return response()->json([
+                    'status' => 'error',
+                    'message' => 'Nenhuma disciplina encontrada'
+                ], 404);
+            }
             return response()->json([
                 'status' => 'success',
-                'message' => 'Informações do card',
+                'message' => 'Disciplinas encontradas',
                 'data' => [
-                    'total' => $alunosCount,
-                    'maior_idade' => $alunosMaiorIdade,
-                    'menor_idade' => $alunosMenorIdade
+                    'disciplinas' => $disciplinas->map(function ($disciplina) {
+                        return [
+                            'id' => $disciplina->id,
+                            'titulo' => $disciplina->titulo,
+                            'descricao' => $disciplina->descricao
+                        ];
+                    }),
+                    'cursos' => $cursos->map(function ($curso) {
+                        return [
+                            'id' => $curso->id,
+                            'titulo' => $curso->titulo,
+                            'data_inicio' => Carbon::parse($curso->data_inicio)->format('d/m/Y'),
+                            'data_fim' => Carbon::parse($curso->data_fim)->format('d/m/Y')
+                        ];
+                    })
                 ]
             ]);
         } catch (\Throwable $th) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'Erro ao buscar informações do card'
-            ], 400);
+                'message' => 'Aluno não encontrado'
+            ], 404);
         }
     }
 }
