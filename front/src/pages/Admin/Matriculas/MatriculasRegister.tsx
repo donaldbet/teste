@@ -31,11 +31,16 @@ export default function MatriculasRegister() {
 
     useEffect(() => {
         const fetchAlunos = async () => {
-            const response = await fetch(`${import.meta.env.VITE_API_URL}/alunos`);
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/alunos`, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`
+                }
+            });
             if (!response.ok) {
-                console.error("Erro ao buscar alunos");
                 const data = await response.json();
-                console.log(data.message);
+                setMsgError(data.message);
                 return;
             }
             const data = await response.json();
@@ -43,11 +48,16 @@ export default function MatriculasRegister() {
             setFilteredAlunos(data.data);
         };
         const fetchCursos = async () => {
-            const response = await fetch(`${import.meta.env.VITE_API_URL}/cursos`);
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/cursos`, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`
+                }
+            });
             if (!response.ok) {
-                console.error("Erro ao buscar cursos");
                 const data = await response.json();
-                console.log(data.message);
+                setMsgError(data.message);
                 return;
             }
             const data = await response.json();
@@ -84,22 +94,20 @@ export default function MatriculasRegister() {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    "Accept": "application/json"
+                    "Accept": "application/json",
+                    "Authorization": `Bearer ${localStorage.getItem('token')}`
                 },
                 body: JSON.stringify(formData)
             });
             const data = await response.json();
             if (!response.ok) {
-                console.error("Erro ao matricular aluno");
                 setMsgError(data.message);
                 return;
             }
-            console.log("Aluno matriculado com sucesso");
             setSuccess(true);
         } catch (error) {
-            console.error("Erro ao matricular aluno", error);
+            //
         }
-        console.log("Matriculando aluno:", selectedAluno, "no curso:", selectedCursos);
     };
 
     if (success) {
@@ -147,7 +155,6 @@ export default function MatriculasRegister() {
                                             dados={filteredAlunos.find((aluno) => aluno.id === selectedAluno?.id)!}
                                             isStudent={true}
                                             onDelete={() => { }}
-                                            onEdit={() => { }}
                                             btns={false}
                                         />
                                     )}
@@ -187,7 +194,6 @@ export default function MatriculasRegister() {
                                     <CardCursos
                                         dados={filteredCursos.find((curso) => curso.id === selectedCursos?.id)!}
                                         onDelete={() => { }}
-                                        onEdit={() => { }}
                                         btns={false}
                                     />
                                 </div>

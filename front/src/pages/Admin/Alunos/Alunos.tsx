@@ -19,11 +19,15 @@ export default function Alunos() {
 
     useEffect(() => {
         const fetchAlunos = async () => {
-            const response = await fetch(`${import.meta.env.VITE_API_URL}/alunos`);
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/alunos`, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`
+                }
+            });
             if (!response.ok) {
-                console.error("Erro ao buscar alunos");
                 const data = await response.json();
-                console.log(data.message);
                 setMsgError(data.message);
                 return;
             }
@@ -75,8 +79,10 @@ export default function Alunos() {
                 <h1 className="text-4xl font-bold text-[#374151]">Alunos</h1>
             </div>
             <SearchBar onSearch={handleSearch} email={true} />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 p-2 gap-4">
-                <AlunosList dados={filteredAlunos} />
+            <div className="flex justify-center items-center">
+                <div className="grid flex grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-2 gap-4 lg:w-200 items-center">
+                    <AlunosList dados={filteredAlunos} />
+                </div>
             </div>
             <BtnFilter email={true} onFilter={handleFilter} />
         </>

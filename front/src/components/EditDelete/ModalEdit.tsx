@@ -20,18 +20,22 @@ export default function ModalEdit({ item, isOpen, toogleModal, isAluno, isProfes
     const [msgSuccess, setMsgSuccess] = useState("");
 
     useEffect(() => {
-        if (isAluno) {
-            setToLink(`${import.meta.env.VITE_API_URL}/alunos/${item.id}`);
-        } else if (isProfessor) {
-            setToLink(`${import.meta.env.VITE_API_URL}/professores/${item.id}`);
-        } else if (isCurso) {
-            setToLink(`${import.meta.env.VITE_API_URL}/cursos/${item.id}`);
-        } else if (isDisciplina) {
-            setToLink(`${import.meta.env.VITE_API_URL}/disciplinas/${item.id}`);
-        } else if (isMatricula) {
-            setToLink(`${import.meta.env.VITE_API_URL}/matriculas/${item.id}`);
-        }
+        const fetchData = async () => {
+            if (isAluno) {
+                setToLink(`${import.meta.env.VITE_API_URL}/alunos/${item.id}`);
+            } else if (isProfessor) {
+                setToLink(`${import.meta.env.VITE_API_URL}/professores/${item.id}`);
+            } else if (isCurso) {
+                setToLink(`${import.meta.env.VITE_API_URL}/cursos/${item.id}`);
+            } else if (isDisciplina) {
+                setToLink(`${import.meta.env.VITE_API_URL}/disciplinas/${item.id}`);
+            } else if (isMatricula) {
+                setToLink(`${import.meta.env.VITE_API_URL}/matriculas/${item.id}`);
+            }
+        };
+        fetchData();
     }, [isAluno, isProfessor, isCurso, isDisciplina, isMatricula]);
+    
     const handleSave = async () => {
         let formData = {}
         if (isAluno || isProfessor) {
@@ -54,24 +58,31 @@ export default function ModalEdit({ item, isOpen, toogleModal, isAluno, isProfes
                 data_inicio: editedItem.data_inicio,
                 data_fim: editedItem.data_fim
             };
+        } else if (isDisciplina) {
+            formData ={
+                titulo: editedItem.titulo,
+                descricao: editedItem.descricao
+            }
         }
         try {
             const response = await fetch(`${toLink}`, {
                 headers: {
                     "Content-Type": "application/json",
-                    "Accept": "application/json"
+                    "Accept": "application/json",
+                    "Authorization": `Bearer ${localStorage.getItem('token')}`
                 },
                 method: "PUT",
                 body: JSON.stringify(formData)
             });
             const data = await response.json();
             if (data.status === "success") {
+                setMsgSuccess(data.message);
                 window.location.reload();
             } else {
                 setMsgError(data.message);
             }
         } catch (error) {
-            console.log(error);
+            //
         }
     };
 
@@ -197,6 +208,32 @@ export default function ModalEdit({ item, isOpen, toogleModal, isAluno, isProfes
                                         className="w-full p-2 border justify-center rounded-md"
                                         value={editedItem.curso}
                                         onChange={(e) => setEditedItem({ ...editedItem, curso: e.target.value })}
+                                    />
+                                </div>
+                            </>
+                        )}
+                        {isDisciplina && (
+                            <>
+                                <div className="flex justify-center items-center gap-4 mb-4">
+                                    <label htmlFor="nome">Título:</label>
+                                    <input
+                                        required
+                                        name="titulo"
+                                        type="text"
+                                        className="w-full p-2 border justify-center rounded-md"
+                                        value={editedItem.titulo}
+                                        onChange={(e) => setEditedItem({ ...editedItem, titulo: e.target.value })}
+                                    />
+                                </div>
+                                <div className="flex justify-center items-center gap-4 mb-4">
+                                    <label htmlFor="nome">Descrição:</label>
+                                    <input
+                                        required
+                                        name="curso"
+                                        type="text"
+                                        className="w-full p-2 border justify-center rounded-md"
+                                        value={editedItem.descricao}
+                                        onChange={(e) => setEditedItem({ ...editedItem, descricao: e.target.value })}
                                     />
                                 </div>
                             </>

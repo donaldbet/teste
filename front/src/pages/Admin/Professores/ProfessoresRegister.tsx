@@ -31,13 +31,12 @@ export default function ProfessoresRegister() {
                 headers: {
                     "Content-Type": "application/json",
                     "Accept": "application/json",
+                    "Authorization": `Bearer ${localStorage.getItem('token')}`
                 },
                 body: JSON.stringify(formData),
             });
             if (!response.ok) {
-                console.error("Erro ao cadastrar professor");
                 const data = await response.json();
-                console.log(data.message);
                 setMsgError(data.message);
                 return;
             }
@@ -48,10 +47,10 @@ export default function ProfessoresRegister() {
                 setEmail("");
             }
         } catch (error) {
-            console.error("Erro ao cadastrar professor");
-            console.error(error);
+            //
         }
     }
+
     if (success) {
         return (
             <div className="flex flex-col items-center gap-8 p-8 bg-gray-100 rounded-lg shadow-md h-screen">
@@ -77,6 +76,11 @@ export default function ProfessoresRegister() {
                             type="text"
                             className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                             onChange={(e) => setNome(e.target.value)}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter") {
+                                    document.getElementsByName("email")[0].focus();
+                                }
+                            }}
                         />
                     </div>
                     <div className="flex flex-col gap-2">
@@ -86,6 +90,11 @@ export default function ProfessoresRegister() {
                             type="email"
                             className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                             onChange={(e) => setEmail(e.target.value)}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter") {
+                                    handleSubmit(e);
+                                }
+                            }}
                         />
                     </div>
                     <button className="w-full p-3 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500" onClick={handleSubmit}>

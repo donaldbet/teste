@@ -13,19 +13,16 @@ interface Aluno{
 interface AlunosListProps {
     dados:Aluno[];
     selectable?: boolean;
-    onClick?: (aluno: Aluno) => void;
 }
 
 
 
-export default function AlunosList({ dados, onClick }: AlunosListProps) {
+export default function AlunosList({ dados }: AlunosListProps) {
     const [alunos, setAlunos] = useState<Aluno[]>([]);
     const [successMsg, setSuccessMsg] = useState("");
     const [errorMsg, setErrorMsg] = useState("");
 
-    useEffect(() => {
-        console.log("Dados de aluno:" ,dados);
-        
+    useEffect(() => {       
         setAlunos(dados);
     }, [dados]);
 
@@ -35,6 +32,8 @@ export default function AlunosList({ dados, onClick }: AlunosListProps) {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json",
+                    "Accept": "application/json",
+                    "Authorization": `Bearer ${localStorage.getItem('token')}`
                 },
             });
             const data = await response.json();
@@ -47,20 +46,14 @@ export default function AlunosList({ dados, onClick }: AlunosListProps) {
         } catch (error) {
             
         }
-        console.log("Deletando aluno:", item);
     };
-
-    const onEdit = (item: any) => {
-        console.log("Editando aluno:", item);
-    };
-
 
     return (
         <>
             {successMsg && <MsgSuccess msg={successMsg} />}
             {errorMsg && <MsgError msg={errorMsg} />}
             {alunos.map((aluno, index) => (
-                <CardProfile key={index} dados={aluno} isStudent={true} onDelete={onDelete} onEdit={onEdit} />
+                <CardProfile key={index} dados={aluno} isStudent={true} onDelete={onDelete}/>
             ))}
         </>
     )

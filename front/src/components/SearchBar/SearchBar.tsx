@@ -27,7 +27,7 @@ export default function SearchBar({ email, onSearch }: { email?: boolean, onSear
 
     return (
         <div className="flex flex-col justify-center items-center p-5">
-            <div className="flex lg:w-300 justify-center items-center bg-white rounded-lg shadow-xl p-3 focus-within:ring-2 focus-within:ring-[#00254d]">
+            <div className="flex lg:w-200 justify-center items-center bg-white rounded-lg shadow-xl p-3 focus-within:ring-2 focus-within:ring-[#00254d]">
                 <input
                     id="search"
                     name="search"

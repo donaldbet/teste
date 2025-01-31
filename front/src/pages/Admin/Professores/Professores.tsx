@@ -18,11 +18,15 @@ export default function Professores() {
 
     useEffect(() => {
         const fetchProfessores = async () => {
-            const response = await fetch(`${import.meta.env.VITE_API_URL}/professores`);
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/professores`, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`
+                }
+            });
             if (!response.ok) {
-                console.error("Erro ao buscar professores");
                 const data = await response.json();
-                console.log(data.message);
                 setMsgError(data.message);
                 return;
             }
@@ -60,8 +64,10 @@ export default function Professores() {
                 <h1 className="text-4xl font-bold text-[#374151]">Professores</h1>
             </div>
             <SearchBar email={false} onSearch={handleSearch} />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 p-2 gap-4">
-                <ProfessoresList dados={filteredProfessores} />
+            <div className="flex justify-center items-center">
+                <div className="grid flex grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-2 gap-4 lg:w-200 items-center">
+                    <ProfessoresList dados={filteredProfessores} />
+                </div>
             </div>
             <BtnFilter onFilter={handleFilter} email={false} />
         </>

@@ -26,7 +26,6 @@ export default function BtnFilter({ email, onFilter }: BtnFilterProps) {
 
         setFilter(newFilter);
         onFilter(newFilter);
-        console.log(newFilter);
 
     };
 

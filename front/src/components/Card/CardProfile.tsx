@@ -11,16 +11,14 @@ interface StudentCardProps {
     },
     isStudent?: boolean;
     onDelete: (item: any) => void;
-    onEdit: (item: any) => void;
     btns?: boolean;
 }
 
-export default function CardProfile({ dados, isStudent, onDelete, onEdit, btns = true }: StudentCardProps) {
+export default function CardProfile({ dados, isStudent, onDelete, btns = true }: StudentCardProps) {
 
     const [openModal, setOpenModal] = useState(false);
     const [textColor, setTextColor] = useState("text-[#374151]");
     useEffect(() => {
-        console.log("Dados de aluno CF:", dados);
         if (isStudent) {
             setTextColor("text-[#374151]");
         } else {
@@ -68,10 +66,12 @@ export default function CardProfile({ dados, isStudent, onDelete, onEdit, btns =
                         <div className="flex justify-center items-center mt-4 mb-4">
                             <span className="flex border-b-2 border-gray-300 w-300"></span>
                         </div>
-                        <div className="flex items-center text-center gap-4 mt-4">
-                            <h3 className="text-xl font-bold">Data de Nascimento:</h3>
-                            <h3 className="text-xl">{dados.data_nascimento ? dados.data_nascimento : "Não informado"}</h3>
-                        </div>
+                        {dados.data_nascimento && (
+                            <div className="flex items-center text-center gap-4 mt-4">
+                                <h3 className="text-xl font-bold">Data de Nascimento:</h3>
+                                <h3 className="text-xl">{dados.data_nascimento ? dados.data_nascimento : "Não informado"}</h3>
+                            </div>
+                        )}
                         {btns && (
                             <BtnsEditDelete
                                 item={{
@@ -80,7 +80,6 @@ export default function CardProfile({ dados, isStudent, onDelete, onEdit, btns =
                                     data_nascimento: dados.data_nascimento,
                                     id: dados.id
                                 }}
-                                onEdit={() => onEdit(dados)}
                                 onDelete={() => {
                                     handleOpenModal();
                                     onDelete(dados)

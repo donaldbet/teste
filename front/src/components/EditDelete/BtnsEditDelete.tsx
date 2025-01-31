@@ -5,7 +5,6 @@ import ModalEdit from "./ModalEdit";
 
 interface BtnsEditDeleteProps {
     item: any;
-    onEdit: (item: any) => void;
     onDelete: (item: any) => void;
     isEdit?: boolean;
     isAluno?: boolean;
@@ -15,7 +14,7 @@ interface BtnsEditDeleteProps {
     isMatricula?: boolean;
 }
 
-export default function BtnsEditDelete({ item, onEdit, onDelete, isEdit = true, isAluno, isProfessor, isCurso, isDisciplina, isMatricula }: BtnsEditDeleteProps) {
+export default function BtnsEditDelete({ item, onDelete, isEdit = true, isAluno, isProfessor, isCurso, isDisciplina, isMatricula }: BtnsEditDeleteProps) {
     const [openModal, setOpenModal] = useState(false);
     const [modalType, setModalType] = useState<"delete" | "edit" | "">("");
     const toogleModal = () => {
@@ -33,20 +32,16 @@ export default function BtnsEditDelete({ item, onEdit, onDelete, isEdit = true, 
         } else {
             if (onDelete) {
                 onDelete(item);
-
-            } else {
-                console.error("onDelete não foi passado corretamente para BtnsEditDelete");
             }
             toogleModal();
         }
     }
 
-    const handleEdit = (item: any) => {
+    const handleEdit = () => {
         if (!openModal) {
             toogleModal();
             toogleModalType("edit");
         } else {
-            onEdit(item);
             toogleModal();
         }
     }

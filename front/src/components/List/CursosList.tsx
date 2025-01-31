@@ -31,6 +31,8 @@ export default function CursosList({ dados }: CursosListProps) {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json",
+                    "Accept": "application/json",
+                    "Authorization": `Bearer ${localStorage.getItem('token')}`
                 },
             });
             const data = await response.json();
@@ -45,17 +47,12 @@ export default function CursosList({ dados }: CursosListProps) {
         }
     };
 
-    const onEdit = (item: any) => {
-        console.log("Editando curso:", item);
-    };
-
-
     return (
         <>
             {successMsg && <MsgSuccess msg={successMsg} />}
             {errorMsg && <MsgError msg={errorMsg} />}
             {cursos.map((curso, index) => (
-                <CardCursos key={index} dados={curso} onDelete={onDelete} onEdit={onEdit} />
+                <CardCursos key={index} dados={curso} onDelete={onDelete}/>
             ))}
         </>
     )

@@ -30,7 +30,8 @@ export default function ProfessoresList({ dados }: ProfessoresListProps) {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json",
-                    "Accept": "application/json"
+                    "Accept": "application/json",
+                    "Authorization": `Bearer ${localStorage.getItem('token')}`
                 },
             });
             const data = await response.json();
@@ -45,17 +46,12 @@ export default function ProfessoresList({ dados }: ProfessoresListProps) {
         }
     };
 
-    const onEdit = (item: any) => {
-        console.log("Editando professor:", item);
-    };
-
-
     return (
         <>
             {successMsg && <MsgSuccess msg={successMsg} />}
             {errorMsg && <MsgError msg={errorMsg} />}
             {professores.map((professor, index) => (
-                <CardProfile key={index} dados={professor} isStudent={false} onDelete={onDelete} onEdit={onEdit} />
+                <CardProfile key={index} dados={professor} isStudent={false} onDelete={onDelete} />
             ))}
         </>
     )

@@ -26,11 +26,11 @@ export default function CursosRegister() {
                 headers: {
                     "Content-Type": "application/json",
                     "Accept": "application/json",
+                    "Authorization": `Bearer ${localStorage.getItem('token')}`
                 },
                 body: JSON.stringify(formData),
             });
             if (!response.ok) {
-                console.error("Erro ao cadastrar curso");
                 const data = await response.json();
                 setMsgError(data.message);
                 return;
@@ -41,8 +41,7 @@ export default function CursosRegister() {
                 setSuccess(true);
             }
         } catch (error) {
-            console.error("Erro ao cadastrar curso");
-            console.error(error);
+            //
         }
     }
     if (success) {
@@ -72,6 +71,12 @@ export default function CursosRegister() {
                             type="text"
                             className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                             onChange={(e) => setTitulo(e.target.value)}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter") {
+                                    e.preventDefault();
+                                    document.getElementsByName("descricao")[0].focus();
+                                }
+                            }}
                         />
                     </div>
                     <div className="flex flex-col gap-2">
@@ -82,6 +87,12 @@ export default function CursosRegister() {
                             type="text"
                             className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                             onChange={(e) => setDescricao(e.target.value)}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter") {
+                                    e.preventDefault();
+                                    document.getElementsByName("data_inicio")[0].focus();
+                                }
+                            }}
                         />
                     </div>
                     <div className="flex flex-col gap-2">
@@ -92,6 +103,12 @@ export default function CursosRegister() {
                             type="date"
                             className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                             onChange={(e) => setDataInicio(e.target.value)}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter") {
+                                    e.preventDefault();
+                                    document.getElementsByName("data_fim")[0].focus();
+                                }
+                            }}
                         />
                     </div>
                     <div className="flex flex-col gap-2">
@@ -102,6 +119,12 @@ export default function CursosRegister() {
                             type="date"
                             className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                             onChange={(e) => setDataFim(e.target.value)}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter") {
+                                    e.preventDefault();
+                                    handleSubmit(e);
+                                }
+                            }}
                         />
                     </div>
                     <button className="w-full p-3 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500" onClick={handleSubmit}>

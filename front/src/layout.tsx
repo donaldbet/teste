@@ -5,7 +5,7 @@ import BtnRegister from './components/BtnRegister/BtnRegister'
 export function Layout() {
   const location = useLocation()
   const hideHeaderFooter = location.pathname === '/login';
-  const hideRegister = ('cadastrar' === location.pathname.split("/").pop()) || location.pathname === '/login' || location.pathname === '/admin' || location.pathname === '/admin/configuracoes';
+  const hideRegister = ('cadastrar' === location.pathname.split("/").pop()) || location.pathname === '/login' || location.pathname === '/admin' || location.pathname === '/admin/configuracoes' || localStorage.getItem('isAdmin') === 'false';
   const typeRegister = window.location.pathname;
   const pathSegments = typeRegister.split("/");
   let str = pathSegments[pathSegments.length - 1];
@@ -20,7 +20,15 @@ export function Layout() {
       </>
     )
   }
-
+  if(location.pathname === '/'){
+    const isAdmin = localStorage.getItem('isAdmin') === 'true';
+    if(isAdmin){
+      window.location.href = '/admin';
+    }
+    else{
+      window.location.href = '/aluno';
+    }
+  }
   return (
     <>
       {!hideHeaderFooter && <Header />}

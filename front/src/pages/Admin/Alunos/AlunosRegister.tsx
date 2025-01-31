@@ -46,13 +46,12 @@ export default function AlunosRegister() {
                 headers: {
                     "Content-Type": "application/json",
                     "Accept": "application/json",
+                    "Authorization": `Bearer ${localStorage.getItem('token')}`
                 },
                 body: JSON.stringify(formData),
             });
             if (!response.ok) {
-                console.error("Erro ao cadastrar aluno");
                 const data = await response.json();
-                console.log(data.message);
                 setMsgError(data.message);
                 return;
             }
@@ -62,7 +61,7 @@ export default function AlunosRegister() {
             }
 
         } catch (error) {
-            console.error(error);
+            //
         }
     }
 

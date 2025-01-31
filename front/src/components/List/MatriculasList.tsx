@@ -13,6 +13,7 @@ interface Matricula {
         id: number;
         titulo: string;
     };
+    dataHora: string;
 }
 
 interface MatriculasListProps {
@@ -35,6 +36,8 @@ export default function MatriculasList({ dados }: MatriculasListProps) {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json",
+                    "Accept": "application/json",
+                    "Authorization": `Bearer ${localStorage.getItem('token')}`
                 },
             });
             const data = await response.json();
@@ -49,17 +52,12 @@ export default function MatriculasList({ dados }: MatriculasListProps) {
         }
     };
 
-    const onEdit = (item: any) => {
-        console.log("Editando curso:", item);
-    };
-
-
     return (
         <>
             {successMsg && <MsgSuccess msg={successMsg} />}
             {errorMsg && <MsgError msg={errorMsg} />}
             {matriculas.map((matricula, index) => (
-                <CardMatricula key={index} dados={matricula} onDelete={onDelete} onEdit={onEdit} color="bg-[#009dd1]"/>
+                <CardMatricula key={index} dados={matricula} onDelete={onDelete} color="bg-[#009dd1]"/>
             ))}
         </>
     )

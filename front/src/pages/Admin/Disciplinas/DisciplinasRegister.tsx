@@ -31,11 +31,16 @@ export default function DisciplinasRegister() {
 
     useEffect(() => {
         const fetchCursos = async () => {
-            const response = await fetch(`${import.meta.env.VITE_API_URL}/cursos`);
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/cursos`, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`
+                }
+            });
             if (!response.ok) {
-                console.error("Erro ao buscar cursos");
-                const errorData = await response.json();
-                console.log(errorData.message);
+                const data = await response.json();
+                setMsg(data.message);
                 return;
             }
             const data = await response.json();
@@ -43,11 +48,16 @@ export default function DisciplinasRegister() {
             setFilteredCursos(data.data);
         };
         const fetchProfessores = async () => {
-            const response = await fetch(`${import.meta.env.VITE_API_URL}/professores`);
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/professores`, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`
+                }
+            });
             if (!response.ok) {
-                console.error("Erro ao buscar professores");
-                const errorData = await response.json();
-                console.log(errorData.message);
+                const data = await response.json();
+                setMsg(data.message);
                 return;
             }
             const data = await response.json();
@@ -88,8 +98,9 @@ export default function DisciplinasRegister() {
             const response = await fetch(`${import.meta.env.VITE_API_URL}/disciplinas`, {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json",
-                    "Accept": "application/json"
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`
                 },
                 body: JSON.stringify(formData)
             });
@@ -100,10 +111,8 @@ export default function DisciplinasRegister() {
             }
             setSuccess(true);
         } catch (error) {
-
+            //
         }
-        console.log(formData);
-        console.log("Cadastrando disciplina:", titulo, descricao, selectedCurso, selectedProfessor);
     };
 
     useEffect(() => {
