@@ -61,15 +61,38 @@ php artisan app:insert-admin-user
 php artisan serve
 ```
 
-🧪 Testes
+### 8. Testes unitários
+### Configuração do ambiente de testes
+1. Criação do arquivo .env.testing
 
-Para rodar os testes unitários:
+O Laravel permite um ambiente de testes separado. Para configurá-lo, copie o arquivo .env para .env.testing:
+```bash
+cp .env .env.testing
+```
+2. Edite o arquivo .env.testing e ajuste a conexão com o banco de testes:
+
+```bash
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel_testing
+DB_USERNAME=root
+DB_PASSWORD=
+```
+Certifique-se de criar o banco de dados laravel_testing antes de rodar os testes.
+
+3. Rodar as migrations para o banco de testes
+```bash
+php artisan migrate --env=testing
+```
+
+4. Para rodar os testes unitários:
 ```bash
 php artisan test
 ```
 
 
-### 8. Login
+### 9. Login
 Todo aluno criado tem seu login definido da seguinte forma:
 ```bash
 email: (email cadastrado)
@@ -92,9 +115,9 @@ senha: anthoniusdev
 - CRUD de Disciplinas (Título, Descrição, Curso associado, Professor associado)
 - CRUD de Alunos (Nome, Email, Data de Nascimento)
 - CRUD de Matrículas (Matrícula de Alunos em Cursos)
-- Autenticação de Administradores e Alunos (Duas áreas separadas:
-- Administrador gerencia matrículas e cadastros
-- Aluno pode atualizar seus dados)
+- Autenticação de Administradores e Alunos (Duas áreas separadas):
+  - Administrador gerencia matrículas e cadastros
+  - Aluno pode atualizar seus dados
 - Filtros na listagem de alunos (Consulta pelo nome e email)
 - Relatórios de alunos por faixa etária (Idade média, aluno mais novo e mais velho por curso)
   
