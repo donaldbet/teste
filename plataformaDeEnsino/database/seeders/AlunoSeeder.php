@@ -15,7 +15,7 @@ class AlunoSeeder extends Seeder
         Aluno::create([
             'nome' => 'Emanuel',
             'email' => 'emanuel@exemplo.com',
-            'senha' => bcrypt('senha123'),
+            'senha' => 'senha123',
             'nascimento' => '2000-01-01'
         ]);
     }

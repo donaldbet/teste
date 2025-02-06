@@ -6,7 +6,11 @@ import { InertiaProgress } from "@inertiajs/progress";
 import { ZiggyVue } from 'ziggy-js';
 import { Ziggy } from "./ziggy";
 
+import Welcome from './components/Welcome.vue';
+import EditProfessor from './components/Professor/EditProfessor.vue'
+
 InertiaProgress.init();
+
 
 createInertiaApp({
     resolve: async (name) => {
@@ -22,3 +26,6 @@ createInertiaApp({
             .mount(el);
     },
 });
+
+const app = createApp(Welcome);
+app.mount('#app');

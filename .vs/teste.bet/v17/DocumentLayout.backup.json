@@ -3,88 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\rodri\\source\\repos\\teste.bet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\resources\\views\\matriculas\\index.blade.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataforma-ensino\\resources\\views\\matriculas\\index.blade.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\app\\Http\\Controllers\\ProfessorController.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataformaDeEnsino\\app\\Http\\Controllers\\ProfessorController.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\routes\\web.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataforma-ensino\\routes\\web.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\routes\\web.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataformaDeEnsino\\routes\\web.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\app\\Http\\Controllers\\MatriculaController.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataforma-ensino\\app\\Http\\Controllers\\MatriculaController.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\app\\Http\\Controllers\\AlunoController.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataformaDeEnsino\\app\\Http\\Controllers\\AlunoController.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataforma-ensino\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\resources\\views\\alunos\\edit.blade.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataformaDeEnsino\\resources\\views\\alunos\\edit.blade.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataforma-ensino\\database\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\app\\Models\\Professor.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataformaDeEnsino\\app\\Models\\Professor.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\seeders\\DatabaseSeeder.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataforma-ensino\\database\\seeders\\DatabaseSeeder.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\config\\auth.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataformaDeEnsino\\config\\auth.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\factories\\DisciplinaFactory.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataforma-ensino\\database\\factories\\DisciplinaFactory.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\resources\\views\\professores\\edit.blade.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataformaDeEnsino\\resources\\views\\professores\\edit.blade.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\app\\Models\\Curso.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataforma-ensino\\app\\Models\\Curso.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\resources\\views\\professores\\show.blade.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataformaDeEnsino\\resources\\views\\professores\\show.blade.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\app\\Models\\Disciplina.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataforma-ensino\\app\\Models\\Disciplina.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\app\\Models\\Professor.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataforma-ensino\\app\\Models\\Professor.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\migrations\\2025_02_05_112424_create_cursos_table.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataforma-ensino\\database\\migrations\\2025_02_05_112424_create_cursos_table.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\factories\\CursoFactory.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataforma-ensino\\database\\factories\\CursoFactory.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\app\\Models\\Matricula.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataforma-ensino\\app\\Models\\Matricula.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\migrations\\2025_02_05_112652_create_disciplinas_table.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataforma-ensino\\database\\migrations\\2025_02_05_112652_create_disciplinas_table.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\migrations\\2025_02_05_112700_create_matriculas_table.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataforma-ensino\\database\\migrations\\2025_02_05_112700_create_matriculas_table.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\migrations\\2025_02_05_112656_create_alunos_table.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataforma-ensino\\database\\migrations\\2025_02_05_112656_create_alunos_table.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\factories\\AlunoFactory.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataforma-ensino\\database\\factories\\AlunoFactory.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\factories\\MatriculaFactory.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataforma-ensino\\database\\factories\\MatriculaFactory.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\factories\\ProfessorFactory.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataforma-ensino\\database\\factories\\ProfessorFactory.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\app\\Models\\Aluno.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataforma-ensino\\app\\Models\\Aluno.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\migrations\\2025_02_05_112617_create_professores_table.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataforma-ensino\\database\\migrations\\2025_02_05_112617_create_professores_table.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\resources\\views\\alunos\\show.blade.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:plataformaDeEnsino\\resources\\views\\alunos\\show.blade.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
     }
   ],
   "DocumentGroupContainers": [
@@ -94,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -133,276 +85,124 @@
               "Name": "ST:18:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AlunoController.php",
+              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\app\\Http\\Controllers\\AlunoController.php",
+              "RelativeDocumentMoniker": "plataformaDeEnsino\\app\\Http\\Controllers\\AlunoController.php",
+              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\app\\Http\\Controllers\\AlunoController.php",
+              "RelativeToolTip": "plataformaDeEnsino\\app\\Http\\Controllers\\AlunoController.php",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAUwIcAAAAAAAAAAAAAAA==",
+              "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
+              "WhenOpened": "2025-02-06T20:40:06.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Professor.php",
+              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\app\\Models\\Professor.php",
+              "RelativeDocumentMoniker": "plataformaDeEnsino\\app\\Models\\Professor.php",
+              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\app\\Models\\Professor.php",
+              "RelativeToolTip": "plataformaDeEnsino\\app\\Models\\Professor.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
+              "WhenOpened": "2025-02-06T20:33:18.133Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "index.blade.php",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\resources\\views\\matriculas\\index.blade.php",
-              "RelativeDocumentMoniker": "plataforma-ensino\\resources\\views\\matriculas\\index.blade.php",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\resources\\views\\matriculas\\index.blade.php",
-              "RelativeToolTip": "plataforma-ensino\\resources\\views\\matriculas\\index.blade.php",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "ProfessorController.php",
+              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\app\\Http\\Controllers\\ProfessorController.php",
+              "RelativeDocumentMoniker": "plataformaDeEnsino\\app\\Http\\Controllers\\ProfessorController.php",
+              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\app\\Http\\Controllers\\ProfessorController.php",
+              "RelativeToolTip": "plataformaDeEnsino\\app\\Http\\Controllers\\ProfessorController.php",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAmwHwAAAB5AAAAAAAAAA==",
               "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
-              "WhenOpened": "2025-02-05T15:10:32.044Z",
+              "WhenOpened": "2025-02-06T20:32:09.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "auth.php",
+              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\config\\auth.php",
+              "RelativeDocumentMoniker": "plataformaDeEnsino\\config\\auth.php",
+              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\config\\auth.php",
+              "RelativeToolTip": "plataformaDeEnsino\\config\\auth.php",
+              "ViewState": "AgIAADkAAAAAAAAAAAAkwHwAAAAAAAAAAAAAAA==",
+              "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
+              "WhenOpened": "2025-02-06T20:28:25.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "edit.blade.php",
+              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\resources\\views\\professores\\edit.blade.php",
+              "RelativeDocumentMoniker": "plataformaDeEnsino\\resources\\views\\professores\\edit.blade.php",
+              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\resources\\views\\professores\\edit.blade.php",
+              "RelativeToolTip": "plataformaDeEnsino\\resources\\views\\professores\\edit.blade.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwBQAAAAAAAAAAAAAAA==",
+              "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
+              "WhenOpened": "2025-02-06T20:27:14.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "show.blade.php",
+              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\resources\\views\\professores\\show.blade.php",
+              "RelativeDocumentMoniker": "plataformaDeEnsino\\resources\\views\\professores\\show.blade.php",
+              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\resources\\views\\professores\\show.blade.php",
+              "RelativeToolTip": "plataformaDeEnsino\\resources\\views\\professores\\show.blade.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwAoAAAAAAAAAAAAAAA==",
+              "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
+              "WhenOpened": "2025-02-06T20:27:00.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "edit.blade.php",
+              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\resources\\views\\alunos\\edit.blade.php",
+              "RelativeDocumentMoniker": "plataformaDeEnsino\\resources\\views\\alunos\\edit.blade.php",
+              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\resources\\views\\alunos\\edit.blade.php",
+              "RelativeToolTip": "plataformaDeEnsino\\resources\\views\\alunos\\edit.blade.php",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
+              "WhenOpened": "2025-02-06T20:25:59.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "show.blade.php",
+              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\resources\\views\\alunos\\show.blade.php",
+              "RelativeDocumentMoniker": "plataformaDeEnsino\\resources\\views\\alunos\\show.blade.php",
+              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\resources\\views\\alunos\\show.blade.php",
+              "RelativeToolTip": "plataformaDeEnsino\\resources\\views\\alunos\\show.blade.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
+              "WhenOpened": "2025-02-06T20:22:00.705Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "web.php",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\routes\\web.php",
-              "RelativeDocumentMoniker": "plataforma-ensino\\routes\\web.php",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\routes\\web.php",
-              "RelativeToolTip": "plataforma-ensino\\routes\\web.php",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\routes\\web.php",
+              "RelativeDocumentMoniker": "plataformaDeEnsino\\routes\\web.php",
+              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataformaDeEnsino\\routes\\web.php",
+              "RelativeToolTip": "plataformaDeEnsino\\routes\\web.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABgAAAAAAAAAA==",
               "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
-              "WhenOpened": "2025-02-05T15:08:47.042Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\.gitignore",
-              "RelativeDocumentMoniker": "plataforma-ensino\\.gitignore",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\.gitignore",
-              "RelativeToolTip": "plataforma-ensino\\.gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-05T14:56:08.675Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\.gitignore",
-              "RelativeDocumentMoniker": "plataforma-ensino\\database\\.gitignore",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\.gitignore",
-              "RelativeToolTip": "plataforma-ensino\\database\\.gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-05T14:56:03.795Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MatriculaController.php",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\app\\Http\\Controllers\\MatriculaController.php",
-              "RelativeDocumentMoniker": "plataforma-ensino\\app\\Http\\Controllers\\MatriculaController.php",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\app\\Http\\Controllers\\MatriculaController.php",
-              "RelativeToolTip": "plataforma-ensino\\app\\Http\\Controllers\\MatriculaController.php",
-              "ViewState": "AgIAAGkAAAAwveDTnIQvwIsAAAAAAAAAAAAAAA==",
-              "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
-              "WhenOpened": "2025-02-05T14:47:06.759Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DatabaseSeeder.php",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\seeders\\DatabaseSeeder.php",
-              "RelativeDocumentMoniker": "plataforma-ensino\\database\\seeders\\DatabaseSeeder.php",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\seeders\\DatabaseSeeder.php",
-              "RelativeToolTip": "plataforma-ensino\\database\\seeders\\DatabaseSeeder.php",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
-              "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
-              "WhenOpened": "2025-02-05T14:45:38.674Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CursoFactory.php",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\factories\\CursoFactory.php",
-              "RelativeDocumentMoniker": "plataforma-ensino\\database\\factories\\CursoFactory.php",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\factories\\CursoFactory.php",
-              "RelativeToolTip": "plataforma-ensino\\database\\factories\\CursoFactory.php",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
-              "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
-              "WhenOpened": "2025-02-05T14:01:10.945Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DisciplinaFactory.php",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\factories\\DisciplinaFactory.php",
-              "RelativeDocumentMoniker": "plataforma-ensino\\database\\factories\\DisciplinaFactory.php",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\factories\\DisciplinaFactory.php",
-              "RelativeToolTip": "plataforma-ensino\\database\\factories\\DisciplinaFactory.php",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAwwBYAAAArAAAAAAAAAA==",
-              "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
-              "WhenOpened": "2025-02-05T13:50:51.339Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "MatriculaFactory.php",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\factories\\MatriculaFactory.php",
-              "RelativeDocumentMoniker": "plataforma-ensino\\database\\factories\\MatriculaFactory.php",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\factories\\MatriculaFactory.php",
-              "RelativeToolTip": "plataforma-ensino\\database\\factories\\MatriculaFactory.php",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBEAAAA3AAAAAAAAAA==",
-              "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
-              "WhenOpened": "2025-02-05T13:48:24.029Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ProfessorFactory.php",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\factories\\ProfessorFactory.php",
-              "RelativeDocumentMoniker": "plataforma-ensino\\database\\factories\\ProfessorFactory.php",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\factories\\ProfessorFactory.php",
-              "RelativeToolTip": "plataforma-ensino\\database\\factories\\ProfessorFactory.php",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA7AAAAAAAAAA==",
-              "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
-              "WhenOpened": "2025-02-05T13:45:57.274Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AlunoFactory.php",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\factories\\AlunoFactory.php",
-              "RelativeDocumentMoniker": "plataforma-ensino\\database\\factories\\AlunoFactory.php",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\factories\\AlunoFactory.php",
-              "RelativeToolTip": "plataforma-ensino\\database\\factories\\AlunoFactory.php",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAiwAsAAAAAAAAAAAAAAA==",
-              "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
-              "WhenOpened": "2025-02-05T13:05:08.185Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Professor.php",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\app\\Models\\Professor.php",
-              "RelativeDocumentMoniker": "plataforma-ensino\\app\\Models\\Professor.php",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\app\\Models\\Professor.php",
-              "RelativeToolTip": "plataforma-ensino\\app\\Models\\Professor.php",
-              "ViewState": "AgIAAAsAAAAAAAAAAAA0wBcAAAAFAAAAAAAAAA==",
-              "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
-              "WhenOpened": "2025-02-05T12:24:23.666Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Disciplina.php",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\app\\Models\\Disciplina.php",
-              "RelativeDocumentMoniker": "plataforma-ensino\\app\\Models\\Disciplina.php",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\app\\Models\\Disciplina.php",
-              "RelativeToolTip": "plataforma-ensino\\app\\Models\\Disciplina.php",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAowBkAAAAFAAAAAAAAAA==",
-              "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
-              "WhenOpened": "2025-02-05T12:09:58.92Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Curso.php",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\app\\Models\\Curso.php",
-              "RelativeDocumentMoniker": "plataforma-ensino\\app\\Models\\Curso.php",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\app\\Models\\Curso.php",
-              "RelativeToolTip": "plataforma-ensino\\app\\Models\\Curso.php",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAYwBYAAAAFAAAAAAAAAA==",
-              "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
-              "WhenOpened": "2025-02-05T12:09:43.021Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Aluno.php",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\app\\Models\\Aluno.php",
-              "RelativeDocumentMoniker": "plataforma-ensino\\app\\Models\\Aluno.php",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\app\\Models\\Aluno.php",
-              "RelativeToolTip": "plataforma-ensino\\app\\Models\\Aluno.php",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAgwBEAAAAFAAAAAAAAAA==",
-              "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
-              "WhenOpened": "2025-02-05T12:09:00.489Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Matricula.php",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\app\\Models\\Matricula.php",
-              "RelativeDocumentMoniker": "plataforma-ensino\\app\\Models\\Matricula.php",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\app\\Models\\Matricula.php",
-              "RelativeToolTip": "plataforma-ensino\\app\\Models\\Matricula.php",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAgwCAAAAAAAAAAAAAAAA==",
-              "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
-              "WhenOpened": "2025-02-05T11:57:05.838Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "2025_02_05_112700_create_matriculas_table.php",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\migrations\\2025_02_05_112700_create_matriculas_table.php",
-              "RelativeDocumentMoniker": "plataforma-ensino\\database\\migrations\\2025_02_05_112700_create_matriculas_table.php",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\migrations\\2025_02_05_112700_create_matriculas_table.php",
-              "RelativeToolTip": "plataforma-ensino\\database\\migrations\\2025_02_05_112700_create_matriculas_table.php",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAQwBAAAAAMAAAAAAAAAA==",
-              "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
-              "WhenOpened": "2025-02-05T11:42:43.906Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "2025_02_05_112656_create_alunos_table.php",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\migrations\\2025_02_05_112656_create_alunos_table.php",
-              "RelativeDocumentMoniker": "plataforma-ensino\\database\\migrations\\2025_02_05_112656_create_alunos_table.php",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\migrations\\2025_02_05_112656_create_alunos_table.php",
-              "RelativeToolTip": "plataforma-ensino\\database\\migrations\\2025_02_05_112656_create_alunos_table.php",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAkAAAAAAAAAA==",
-              "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
-              "WhenOpened": "2025-02-05T11:32:47.886Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "2025_02_05_112652_create_disciplinas_table.php",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\migrations\\2025_02_05_112652_create_disciplinas_table.php",
-              "RelativeDocumentMoniker": "plataforma-ensino\\database\\migrations\\2025_02_05_112652_create_disciplinas_table.php",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\migrations\\2025_02_05_112652_create_disciplinas_table.php",
-              "RelativeToolTip": "plataforma-ensino\\database\\migrations\\2025_02_05_112652_create_disciplinas_table.php",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAACAAAAAAAAAA==",
-              "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
-              "WhenOpened": "2025-02-05T11:31:50.845Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "2025_02_05_112617_create_professores_table.php",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\migrations\\2025_02_05_112617_create_professores_table.php",
-              "RelativeDocumentMoniker": "plataforma-ensino\\database\\migrations\\2025_02_05_112617_create_professores_table.php",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\migrations\\2025_02_05_112617_create_professores_table.php",
-              "RelativeToolTip": "plataforma-ensino\\database\\migrations\\2025_02_05_112617_create_professores_table.php",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
-              "WhenOpened": "2025-02-05T11:29:30.717Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "2025_02_05_112424_create_cursos_table.php",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\migrations\\2025_02_05_112424_create_cursos_table.php",
-              "RelativeDocumentMoniker": "plataforma-ensino\\database\\migrations\\2025_02_05_112424_create_cursos_table.php",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\teste.bet\\plataforma-ensino\\database\\migrations\\2025_02_05_112424_create_cursos_table.php",
-              "RelativeToolTip": "plataforma-ensino\\database\\migrations\\2025_02_05_112424_create_cursos_table.php",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAgwBcAAAAHAAAAAAAAAA==",
-              "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
-              "WhenOpened": "2025-02-05T11:27:09.647Z",
+              "WhenOpened": "2025-02-06T20:18:59.361Z",
               "EditorCaption": ""
             }
           ]

@@ -15,7 +15,7 @@ class ProfessorSeeder extends Seeder
         Professor::create([
             'nome' => 'Prof. Jubilut',
             'email' => 'jubilut@exemplo.com',
-            'senha' => bcrypt('senha123')
+            'senha' => 'senha123'
         ]);
     }
 }

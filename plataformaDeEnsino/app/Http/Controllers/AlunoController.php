@@ -127,7 +127,7 @@ class AlunoController extends Controller
         $credentials = $request->only('email', 'senha');
 
         if (Auth::attempt(['email' => $credentials['email'], 'password' => $credentials['senha']])) {
-            return redirect()->route('alunos.index')->with('success', 'Login realizado com sucesso.');
+            return redirect()->route('alunos.show')->with('success', 'Login realizado com sucesso.');
         }
 
         return redirect()->back()->withErrors(['email' => 'Credenciais inválidas.'])->withInput();

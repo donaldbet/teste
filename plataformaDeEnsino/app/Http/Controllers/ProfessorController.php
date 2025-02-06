@@ -17,7 +17,7 @@ class ProfessorController extends Controller
     public function index()
     {
         $professores = Professor::all();
-        return view('professores.index', compact('professores'));
+        return view('professor.show', compact('professor'));
     }
 
     /**
@@ -25,7 +25,7 @@ class ProfessorController extends Controller
      */
     public function create()
     {
-        return view('professores.create');
+        return view('professor.create');
     }
 
     /**
@@ -49,7 +49,7 @@ class ProfessorController extends Controller
         $professor->senha = Hash::make($request->senha);
         $professor->save();
 
-        return redirect()->route('professores.index')->with('success', 'Professor criado com sucesso.');
+        return redirect()->route('professor.show')->with('success', 'Professor criado com sucesso.');
     }
 
     /**
@@ -58,7 +58,7 @@ class ProfessorController extends Controller
     public function show(string $id)
     {
         $professor = Professor::findOrFail($id);
-        return view('professores.show', compact('professor'));
+        return view('professor.show', compact('professor'));
     }
 
     /**
@@ -67,7 +67,7 @@ class ProfessorController extends Controller
     public function edit(string $id)
     {
         $professor = Professor::findOrFail($id);
-        return view('professores.edit', compact('professor'));
+        return view('professor.edit', compact('professor'));
     }
 
     /**
@@ -93,7 +93,7 @@ class ProfessorController extends Controller
         }
         $professor->save();
 
-        return redirect()->route('professores.index')->with('success', 'Professor atualizado com sucesso.');
+        return redirect()->route('professor.index')->with('success', 'Professor atualizado com sucesso.');
     }
 
     /**
@@ -104,7 +104,7 @@ class ProfessorController extends Controller
         $professor = Professor::findOrFail($id);
         $professor->delete();
 
-        return redirect()->route('professores.index')->with('success', 'Professor deletado com sucesso.');
+        return redirect()->route('professor.index')->with('success', 'Professor deletado com sucesso.');
     }
 
     /**
@@ -117,15 +117,39 @@ class ProfessorController extends Controller
 
     /**
      * Handle the login request.
+     *
+     * Vou deixar os logs para verem meu sofrimento, no seeder eu tinha colocado pra encryptar a senha que já seria encryptada automaticamente
+     * Percebi isso horas depois...
      */
     public function login(Request $request)
     {
-        $credentials = $request->only('email', 'senha');
+        try {
+            $credentials = $request->only('email', 'senha');
+            \Log::info('Tentativa de login com as credenciais:', $credentials);
 
-        if (Auth::guard('professor')->attempt(['email' => $credentials['email'], 'password' => $credentials['senha']])) {
-            return redirect()->route('professores.index')->with('success', 'Login realizado com sucesso.');
+            $professor = Professor::where('email', $credentials['email'])->first();
+
+            if ($professor && Hash::check($credentials['senha'], $professor->senha)) {
+                Auth::guard('professor')->login($professor);
+                \Log::info('Login bem-sucedido para o professor:', ['id' => $professor->id, 'email' => $professor->email]);
+                return redirect()->route('professor.show', $professor->id)->with('success', 'Login realizado com sucesso.');
+            } else {
+                if ($professor) {
+                    \Log::info('Professor encontrado no banco de dados:', ['id' => $professor->id, 'email' => $professor->email]);
+                    \Log::info('Senha no banco de dados:', ['senha' => $professor->senha]);
+                    \Log::info('Senha fornecida:', ['senha' => $credentials['senha']]);
+                } else {
+                    \Log::info('Professor não encontrado no banco de dados com o email fornecido.');
+                }
+                \Log::warning('Credenciais inválidas para o login do professor.', $credentials);
+                return redirect()->back()->withErrors(['email' => 'Credenciais inválidas.'])->withInput();
+            }
+        } catch (\Exception $e) {
+            \Log::error('Erro ao fazer login: ' . $e->getMessage());
+            return redirect()->back()->withErrors(['email' => 'Ocorreu um erro ao tentar fazer login.'])->withInput();
         }
-
-        return redirect()->back()->withErrors(['email' => 'Credenciais inválidas.'])->withInput();
     }
+
+
+
 }
