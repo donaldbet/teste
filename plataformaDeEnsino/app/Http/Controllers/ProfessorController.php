@@ -58,7 +58,9 @@ class ProfessorController extends Controller
     public function show(string $id)
     {
         $professor = Professor::findOrFail($id);
-        return view('professor.show', compact('professor'));
+        $disciplinas = $professor->disciplinas()->paginate(5); // 5 resultados por página
+
+        return view('professor.show', compact('professor', 'disciplinas'));
     }
 
     /**

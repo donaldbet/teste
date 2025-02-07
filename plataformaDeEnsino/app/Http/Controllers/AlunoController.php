@@ -14,10 +14,11 @@ class AlunoController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $alunos = Aluno::all();
-        return view('alunos.index', compact('alunos'));
+        $search = $request->input('search');
+        $alunos = Aluno::where('nome', 'like', '%' . $search . '%')->paginate(10); // Paginação de 10 aluno por página
+        return view('aluno.index', compact('alunos'));
     }
 
     /**
@@ -25,7 +26,7 @@ class AlunoController extends Controller
      */
     public function create()
     {
-        return view('alunos.create');
+        return view('aluno.create');
     }
 
     /**
@@ -35,23 +36,24 @@ class AlunoController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'nome' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:alunos',
-            'senha' => 'required|string|min:8|confirmed',
-            'data_nascimento' => 'required|date',
+            'email' => 'required|string|email|max:255|unique:aluno',
+            'senha' => 'required|string',
+            'nascimento' => 'required|date',
         ]);
 
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
         }
 
-        $aluno = new Aluno();
-        $aluno->nome = $request->nome;
-        $aluno->email = $request->email;
-        $aluno->senha = Hash::make($request->senha);
-        $aluno->data_nascimento = $request->data_nascimento;
-        $aluno->save();
 
-        return redirect()->route('alunos.index')->with('success', 'Aluno criado com sucesso.');
+        Aluno::create([
+            'nome' => $request->nome,
+            'email' => $request->email,
+            'senha' => $request->senha,
+            'nascimento' => $request->nascimento,
+        ]);
+
+        return redirect()->route('aluno.index')->with('success', 'Aluno criado com sucesso.');
     }
 
     /**
@@ -60,7 +62,7 @@ class AlunoController extends Controller
     public function show(string $id)
     {
         $aluno = Aluno::findOrFail($id);
-        return view('alunos.show', compact('aluno'));
+        return view('aluno.show', compact('aluno'));
     }
 
     /**
@@ -69,7 +71,7 @@ class AlunoController extends Controller
     public function edit(string $id)
     {
         $aluno = Aluno::findOrFail($id);
-        return view('alunos.edit', compact('aluno'));
+        return view('aluno.edit', compact('aluno'));
     }
 
     /**
@@ -79,7 +81,7 @@ class AlunoController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'nome' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:alunos,email,' . $id,
+            'email' => 'required|string|email|max:255|unique:aluno,email,' . $id,
             'senha' => 'nullable|string|min:8|confirmed',
             'data_nascimento' => 'required|date',
         ]);
@@ -97,7 +99,7 @@ class AlunoController extends Controller
         $aluno->data_nascimento = $request->data_nascimento;
         $aluno->save();
 
-        return redirect()->route('alunos.index')->with('success', 'Aluno atualizado com sucesso.');
+        return redirect()->route('aluno.index')->with('success', 'Aluno atualizado com sucesso.');
     }
 
     /**
@@ -108,7 +110,7 @@ class AlunoController extends Controller
         $aluno = Aluno::findOrFail($id);
         $aluno->delete();
 
-        return redirect()->route('alunos.index')->with('success', 'Aluno deletado com sucesso.');
+        return redirect()->route('aluno.index')->with('success', 'Aluno deletado com sucesso.');
     }
 
     /**
@@ -126,10 +128,14 @@ class AlunoController extends Controller
     {
         $credentials = $request->only('email', 'senha');
 
-        if (Auth::attempt(['email' => $credentials['email'], 'password' => $credentials['senha']])) {
-            return redirect()->route('alunos.show')->with('success', 'Login realizado com sucesso.');
-        }
+        $aluno = Aluno::where('email', $credentials['email'])->first();
 
-        return redirect()->back()->withErrors(['email' => 'Credenciais inválidas.'])->withInput();
+        if ($aluno && Hash::check($credentials['senha'], $aluno->senha)) {
+            Auth::guard('aluno')->login($aluno);
+            return redirect()->route('aluno.show', $aluno->id)->with('success', 'Login realizado com sucesso.');
+        } else {
+            return redirect()->back()->withErrors(['email' => 'Credenciais inválidas.'])->withInput();
+        }
     }
+
 }

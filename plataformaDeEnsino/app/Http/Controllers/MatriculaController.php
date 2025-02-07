@@ -16,13 +16,23 @@ class MatriculaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        // Carrega todas as matrículas com seus relacionamentos
-        $matriculas = Matricula::with(['aluno', 'curso', 'disciplina', 'professor'])->get();
+        $search = $request->input('search');
+        $matriculas = Matricula::whereHas('aluno', function ($query) use ($search) {
+            $query->where('nome', 'like', '%' . $search . '%');
+        })->orWhereHas('curso', function ($query) use ($search) {
+            $query->where('titulo', 'like', '%' . $search . '%');
+        })->orWhereHas('disciplina', function ($query) use ($search) {
+            $query->where('titulo', 'like', '%' . $search . '%');
+        })->paginate(10); // Paginação de 10 matrículas por página
 
-        // Retorna a view 'matriculas.index' com as matrículas
-        return view('matriculas.index', compact('matriculas'));
+        $alunos = Aluno::all();
+        $cursos = Curso::all();
+        $disciplinas = Disciplina::all();
+        $professores = Professor::all();
+
+        return view('matricula.index', compact('matriculas','alunos','cursos','disciplinas','professores'));
     }
 
     /**
@@ -39,7 +49,7 @@ class MatriculaController extends Controller
         $professores = Professor::all();
 
         // Retorna a view 'matriculas.create' com os dados necessários
-        return view('matriculas.create', compact('alunos', 'cursos', 'disciplinas', 'professores'));
+        return view('matricula.create', compact('alunos', 'cursos', 'disciplinas', 'professores'));
     }
 
     /**
@@ -62,7 +72,7 @@ class MatriculaController extends Controller
         Matricula::create($validated);
 
         // Redireciona para a lista de matrículas com uma mensagem de sucesso
-        return redirect()->route('matriculas.index')->with('success', 'Matrícula criada com sucesso!');
+        return redirect()->route('matricula.index')->with('success', 'Matrícula criada com sucesso!');
     }
 
     /**
@@ -77,7 +87,7 @@ class MatriculaController extends Controller
         $matricula->load(['aluno', 'curso', 'disciplina', 'professor']);
 
         // Retorna a view 'matriculas.show' com a matrícula
-        return view('matriculas.show', compact('matricula'));
+        return view('matricula.show', compact('matricula'));
     }
 
     /**
@@ -95,7 +105,7 @@ class MatriculaController extends Controller
         $professores = Professor::all();
 
         // Retorna a view 'matriculas.edit' com a matrícula e os dados necessários
-        return view('matriculas.edit', compact('matricula', 'alunos', 'cursos', 'disciplinas', 'professores'));
+        return view('matricula.edit', compact('matricula', 'alunos', 'cursos', 'disciplinas', 'professores'));
     }
 
     /**
@@ -119,7 +129,7 @@ class MatriculaController extends Controller
         $matricula->update($validated);
 
         // Redireciona para a lista de matrículas com uma mensagem de sucesso
-        return redirect()->route('matriculas.index')->with('success', 'Matrícula atualizada com sucesso!');
+        return redirect()->route('matricula.index')->with('success', 'Matrícula atualizada com sucesso!');
     }
 
     /**
@@ -128,12 +138,13 @@ class MatriculaController extends Controller
      * @param  \App\Models\Matricula  $matricula
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Matricula $matricula)
+    public function destroy($id)
     {
-        // Exclui a matrícula
+
+        $matricula = Matricula::findOrFail($id);
         $matricula->delete();
 
         // Redireciona para a lista de matrículas com uma mensagem de sucesso
-        return redirect()->route('matriculas.index')->with('success', 'Matrícula excluída com sucesso!');
+        return redirect()->route('matricula.index')->with('success', 'Matrícula excluída com sucesso!');
     }
 }
